@@ -1,0 +1,61 @@
+/* ここから下に記載していく */
+.slide-container {
+  width: 700px;
+  display: flex;
+  align-items: center;
+  height: 300px;
+  overflow: hidden;
+  flex-direction: row;
+}
+.slide-wrapper {
+  display: flex;
+  flex-direction: row;
+  animation: slide-flow 20s infinite linear 1s both;
+}
+.slide{
+  width: 300px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+}
+@keyframes slide-flow {
+     0% {transform: translateY(0);}
+ 100% {transform: translateX(-100%);}
+}
+
+.a{
+  animation-duration: 3s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+.cselect{
+  padding: 0;
+  display:table;  /* 定義 */
+  table-layout: fixed;
+  width:100%;
+}
+
+#select{
+  list-style-type:none;
+    border: 1px solid #666;
+    background-color: #FFF;
+    display:table-cell;  /* 定義 */
+    cursor: pointer;
+}
+#select:hover{
+  background: #0066CC;
+  color:#fff;
+}
